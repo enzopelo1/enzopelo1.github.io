@@ -1,7 +1,7 @@
 /* Reset de base */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../img/Connexion.png');
+    background-image: url('Background.png');
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
