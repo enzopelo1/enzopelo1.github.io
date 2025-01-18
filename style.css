@@ -1,7 +1,6 @@
 /* Reset de base */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('/public/img/Background.png'); /* Utilisation d'un chemin absolu */
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #1a191d; /* Couleur de fond par défaut */
