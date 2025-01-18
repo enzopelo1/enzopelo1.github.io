@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Enzo Leprince</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./public/img/LP.png">
+</head>
+<body>
+    <header>
+        <nav>
+            
+                <a href="#" target="_blank" title="Contact" class="contact">
+                    <img src="./public/img/courriel-de-contact.png" alt="Contact">
+                </a>
+            
+            <div class="logo">
+                <a href="index.html" title="Accueil">
+                    <img src="./public/img/LP.png" alt="Logo">
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/enzo-leprince-6a1721253/" target="_blank" title="LinkedIn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/enzopelo1" target="_blank" title="GitHub">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/enzo.leprince" target="_blank" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+            <h1 class="title">Portfolio Enzo Leprince</h1>
+            <p>Découvrez mes projets, compétences et expériences professionnelles.</p>
+            <p class="violet">En cours de réalisation</p>
+            <a href="#more" class="scroll-down">
+                <img src="./public/img/fleche-vers-le-bas.png" alt="Scroll Down">
+            </a>
+    </main>
+    <div class="glow"></div>
+    <section id="more">
+        <h2>Mes Projets</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="./public/img/projet/projet_5.png" alt="Projet 1">
+                <div class="project-info">
+                    <h3>Crack-Hot</h3>
+                    <p>Web développement</p>
+                    <a href="#" class="learn-more">Open</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./public/img/projet/projet_5.png" alt="Projet 2">
+                <div class="project-info">
+                    <h3>Projet 2</h3>
+                    <p>Développement du projet Laravel</p>
+                    <a href="#" class="learn-more">Open</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./public/img/projet/projet_5.png" alt="Projet 3">
+                <div class="project-info">
+                    <h3>Projet 3</h3>
+                    <p>Développement du projet Laravel</p>
+                    <a href="#" class="learn-more">Open</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./public/img/projet/projet_5.png" alt="Projet 4">
+                <div class="project-info">
+                    <h3>Projet 4</h3>
+                    <p>Développement du projet Laravel</p>
+                    <a href="#" class="learn-more">Open</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./public/img/projet/projet_5.png" alt="Projet 5">
+                <div class="project-info">
+                    <h3>Projet 5</h3>
+                    <p>Développement du projet Laravel</p>
+                    <a href="#" class="learn-more">Open</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./public/img/projet/projet_5.png" alt="Projet 6">
+                <div class="project-info">
+                    <h3>Projet 6</h3>
+                    <p>Développement du projet Laravel</p>
+                    <a href="#" class="learn-more">Open</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer section 
+    <footer>
+        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+    -->
+    <script>
+        document.querySelector('.scroll-down').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#more').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', function() {
+        const glow = document.querySelector('.glow');
+        if (window.scrollY > 0) {
+            glow.classList.add('hidden');
+        } else {
+            glow.classList.remove('hidden');
+        }
+    });
+    </script>
+</body>
+</html>
