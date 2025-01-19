@@ -11,7 +11,7 @@
     <header>
         <nav>
             
-                <a href="#" target="_blank" title="Contact" class="contact">
+                <a href="#contact" target="_blank" title="Contact" class="contact-link">
                     <img src="./public/img/courriel-de-contact.png" alt="Contact">
                 </a>
             
@@ -45,67 +45,70 @@
     <section id="more">
         <h2>Mes Projets</h2>
         <div class="projects-grid">
-            <div class="project-card">
+            <a href="projet1.html" class="project-card">
                 <img src="./public/img/projet/projet_5.png" alt="Projet 1">
                 <div class="project-info">
                     <h3>Crack-Hot</h3>
                     <p>Web développement</p>
-                    <a href="#" class="learn-more">Open</a>
+                    <span class="learn-more">Open</span>
                 </div>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="projet2.html" class="project-card">
                 <img src="./public/img/projet/projet_5.png" alt="Projet 2">
                 <div class="project-info">
                     <h3>Projet 2</h3>
                     <p>Développement du projet Laravel</p>
-                    <a href="#" class="learn-more">Open</a>
+                    <span class="learn-more">Open</span>
                 </div>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="projet3.html" class="project-card">
                 <img src="./public/img/projet/projet_5.png" alt="Projet 3">
                 <div class="project-info">
                     <h3>Projet 3</h3>
                     <p>Développement du projet Laravel</p>
-                    <a href="#" class="learn-more">Open</a>
+                    <span class="learn-more">Open</span>
                 </div>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="projet4.html" class="project-card">
                 <img src="./public/img/projet/projet_5.png" alt="Projet 4">
                 <div class="project-info">
                     <h3>Projet 4</h3>
                     <p>Développement du projet Laravel</p>
-                    <a href="#" class="learn-more">Open</a>
+                    <span class="learn-more">Open</span>
                 </div>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="projet5.html" class="project-card">
                 <img src="./public/img/projet/projet_5.png" alt="Projet 5">
                 <div class="project-info">
                     <h3>Projet 5</h3>
                     <p>Développement du projet Laravel</p>
-                    <a href="#" class="learn-more">Open</a>
+                    <span class="learn-more">Open</span>
                 </div>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="projet6.html" class="project-card">
                 <img src="./public/img/projet/projet_5.png" alt="Projet 6">
                 <div class="project-info">
                     <h3>Projet 6</h3>
                     <p>Développement du projet Laravel</p>
-                    <a href="#" class="learn-more">Open</a>
+                    <span class="learn-more">Open</span>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
     
-    <!-- Footer section 
-    <footer>
-        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
-    </footer>
-    -->
+ 
     <script>
         document.querySelector('.scroll-down').addEventListener('click', function(e) {
             e.preventDefault();
             document.querySelector('#more').scrollIntoView({ behavior: 'smooth' });
         });
+
+        document.querySelector('.contact-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#contact').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 
         window.addEventListener('scroll', function() {
         const glow = document.querySelector('.glow');
@@ -117,4 +120,19 @@
     });
     </script>
 </body>
+
+<footer id="contact">
+    <div class="footer-left">
+        <p class="titre-footer">Voulez-vous me contacter?</p>
+        <p>Je suis Enzo Leprince, un développeur passionné par le web et les nouvelles technologies. <br>Je suis à la recherche d'un stage de 14 semaines dans le développement (web).</p>
+    </div>
+    <div class="footer-right">
+        <p>
+            <a href="mailto:enzo.leprince@example.com">hanzoleprince62@gmail.com</a><br>
+            <a href="https://www.linkedin.com/in/enzo-leprince-6a1721253/" target="_blank">LinkedIn</a><br>
+            <a href="https://github.com/enzopelo1" target="_blank">GitHub</a>
+        </p>
+    </div>
+</footer>
+
 </html>
