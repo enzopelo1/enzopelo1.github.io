@@ -1,6 +1,7 @@
 /* Reset de base */
 body {
     font-family: Arial, sans-serif;
+    background-image: url('/public/img/Background.png'); /* Utilisation d'un chemin absolu */
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #1a191d; /* Couleur de fond par défaut */
@@ -52,7 +53,7 @@ nav {
     position: relative;
 }
 
-.contact img{
+.contact-link img{
     width: 10%;
     height: 10%;
     transition: transform 0.3s;
@@ -60,6 +61,7 @@ nav {
 
 .social-links a {
     margin-left: 15px;
+    text-decoration: none;
 }
 
 .social-links img {
@@ -125,7 +127,9 @@ p {
 /* Section projets */
 
 #more {
-    margin-top: 100px; /* Ajustez cette valeur selon vos besoins */
+    margin-top: 50%; /* Ajouter un padding supérieur */
+    margin-bottom: 20%; /* Ajouter un padding inférieur */
+    position: relative; /* Assurer un positionnement relatif */
 }
 
 section {
@@ -139,7 +143,7 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 100px;
+    padding : 100px;
     margin-top: 20px;
 }
 
@@ -148,6 +152,7 @@ section {
     border-radius: 5px;
     overflow: hidden;
     text-align: left;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease; /* Ajout de la transition */
@@ -192,6 +197,7 @@ section {
 .project-info h3 {
     margin-bottom: 5px;
     font-size: 1.2rem;
+    color: #fff;
 }
 
 .project-info p {
@@ -210,10 +216,77 @@ section {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
     font-size: 0.9rem;
 }
+
+.footer-left {
+    max-width: 50%;
+
+}
+
+.footer-left p {
+    color: #d1d1d1;
+    font-size: 20px;
+}
+
+.footer-left .titre-footer {
+    position: relative; /* Nécessaire pour le positionnement absolu du pseudo-élément */
+    color: #fff;
+    font-size: 1.9rem;
+    display: inline-block; /* Nécessaire pour le positionnement précis */
+    background-color: transparent; /* S'assure que le fond du texte ne masque pas la ligne */
+    z-index: 1; /* Gère les couches visuelles */
+    margin-bottom: 10px;
+}
+
+.titre-footer::after {
+    content: ""; /* Crée la ligne de soulignement */
+    position: absolute;
+    bottom: 5px; /* Décale sous le texte */
+    left: 5px; /* Décale légèrement vers la droite */
+    width: 100%; /* Largeur du soulignement */
+    height: 10px; /* Épaisseur */
+    background-color: #8a2be2; /* Couleur violette */
+    z-index: -1; /* Place la ligne sous le texte, mais au-dessus du fond */
+}
+
+
+
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1; /* Place le texte au-dessus par défaut */
+    transition: color 0.3s ease;
+}
+
+
+.footer-right a::after {
+    content: ""; /* Crée l'effet de soulignement */
+    position: absolute;
+    bottom: -1px; /* Position en dessous du texte */
+    left: 5px; /* Décale légèrement le soulignement */
+    width: 0%; /* Initialement invisible */
+    height: 8px; /* Épaisseur de la ligne */
+    background-color: #8a2be2; /* Couleur violette */
+    z-index: -1; /* Place la ligne derrière le texte */
+    transition: width 0.3s ease; /* Animation fluide lors du survol */
+}
+
+.footer-right a:hover::after {
+    width: 100%; /* Étend la ligne sur toute la largeur lors du survol */
+}
+
