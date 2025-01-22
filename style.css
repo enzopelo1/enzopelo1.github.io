@@ -31,7 +31,10 @@ body {
     opacity: 0; /* Masque la lueur lorsque vous scrollez */
 }
 
-
+h2 {
+    font-size: 2rem;
+    color: #fff;
+}
 
 body, h1, p, a, img {
     margin: 0;
@@ -126,7 +129,7 @@ p {
 /* Section projets */
 
 #more {
-    margin-top: 50%; /* Ajouter un padding supérieur */
+    margin-top: 20%; /* Ajouter un padding supérieur */
     margin-bottom: 20%; /* Ajouter un padding inférieur */
     position: relative; /* Assurer un positionnement relatif */
 }
@@ -142,7 +145,8 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding : 100px;
+    padding-left: 100px;
+    padding-right: 100px;
     margin-top: 20px;
 }
 
@@ -208,6 +212,20 @@ section {
     grid-column: span 2; /* Largeur doublée pour certains projets */
 }
 
+
+/* Scroll top button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#scroll-to-top .fleche {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
 
 
 
