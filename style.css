@@ -372,16 +372,28 @@ footer {
     justify-content: flex-end;
     gap: 20px; /* Espace entre les deux sections */
     width: 40%;
+    margin-bottom: 20%;
 }
 
 .project-information h3 {
     margin: 0;
+    padding-top: 10px; /* Espace entre le trait et le texte */
+    border-top: 1px solid white; /* Trait blanc au-dessus */
+    transition: border-top-color 0.3s ease; /* Transition pour l'effet de survol */
 }
 
+.project-information div:hover h3 {
+    border-top-color: #8a2be2; /* Couleur du trait en violet au survol */
+}
 .project-information div {
     text-align: left;
 }
 
+.project-image {
+    display: block;
+    width: 80%; /* 100% - 2 * 10% de marge */
+    margin: 20px auto; /* Centrer l'image horizontalement et ajouter une marge verticale */
+}
 @media (max-width: 768px) {
     .project-content {
         flex-direction: column;
