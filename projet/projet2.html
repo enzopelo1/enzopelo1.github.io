@@ -38,18 +38,86 @@
         <img src="../public/img/fleche-vers-le-haut.png" alt="Scroll to top" class="fleche">
     </a>
 
-    <main>
+    <a href="../index.html" class="back-button" title="Retour">
+        <img src="../public/img/fleche-arriere.png" alt="Retour">
+    </a>
+    <a id="scroll-to-top" href="#">
+        <img src="../public/img/fleche-vers-le-haut.png" alt="Scroll to top" class="fleche">
+    </a>
 
-        <h2>Crack-Hot</h2>
-        <p>Un site web d'énigmes cryptographiques, développé en PHP et JavaScript. Ce projet a été réalisé à la demande d'un client souhaitant évaluer et recruter des candidats grâce à des défis interactifs.</p> 
+    <div class="project-header">
+        <h1>WRC - Web <br>Développement</h1>
+    </div>
+    <div class="project-content">
+        <p class="project-description">
+            Ce site a été développé dans le cadre d’un projet tutoré lors de ma deuxième année de Bachelor Universitaire de Technologie (BUT). <br>
+            Mon équipe, composée de quatre passionnés de sport automobile, a choisi de partager son enthousiasme à travers ce projet. <br>
+            En tant que <span style="color: #8a2be2;">chef de projet</span>, j’ai guidé notre équipe vers la réussite.
+            Le site repose sur une base de données dynamique, qui génère la majorité des pages et enrichit l’expérience utilisateur.           
+        </p>
+        <div class="project-information">
+            <div>
+                <h3>Client</h3>
+                <p>Professeurs IUT</p>
+            </div>
+            <div>
+                <h3>Technologies</h3>
+                <p>PHP ~ CSS ~ JS</p>
+            </div>
+        </div>
+    </div>
+    
+    <img src="../public/img/projet/sae-wrc.png" alt="WRC Enzo Leprince" class="project-image">
+    <img src="../public/img/projet/image_wrc.png" alt="WRC Enzo Leprince" class="project-image">
 
-        <p>En tant que chef de projet, j'ai supervisé le développement et travaillé avec une équipe de 5 personnes pour concevoir le design du site et structurer les différentes fonctionnalités, notamment :</p>
 
-        <p>Classement des participants pour un suivi des performances.</p>
-        <p>Système de connexion et d'administration sécurisé pour la gestion des utilisateurs.</p>
-        <p>Création d'énigmes personnalisées via une interface intuitive.</p>
-        <p>Gestion de clans, encourageant la collaboration entre participants.</p>
-        <p>J'ai également contribué à l'élaboration de la base de données, assurant une organisation optimale des données pour garantir la robustesse et la fluidité de l'application.</p>
-    </main>
+
+<script>
+    document.querySelector('.scroll-down').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#more').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('#scroll-to-top').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    document.querySelector('.contact-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.contact').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+
+
+    window.addEventListener('scroll', function() {
+    const glow = document.querySelector('.glow');
+    if (window.scrollY > 0) {
+        glow.classList.add('hidden');
+    } else {
+        glow.classList.remove('hidden');
+    }
+});
+</script>
+<footer id="contact">
+    <div class="footer-left">
+        <p class="titre-footer">Voulez-vous me contacter?</p>
+        <p>Je m'appelle Enzo Leprince, un développeur passionné par le web et les nouvelles technologies. <br>Je suis à la recherche d'un stage de 14 semaines dans le développement (web).</p>
+    </div>
+    <div class="footer-right">
+        <p>
+            <a href="mailto:hanzoleprince62@gmail.com">hanzoleprince62@gmail.com</a><br>
+            <a href="https://www.linkedin.com/in/enzo-leprince-6a1721253/" target="_blank">LinkedIn</a><br>
+            <a href="https://github.com/enzopelo1" target="_blank">GitHub</a>
+        </p>
+    </div>
+</footer>
 </body>
+
+
 </html>
