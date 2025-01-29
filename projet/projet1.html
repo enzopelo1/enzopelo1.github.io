@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../public/img/LP.png" sizes="16x16">
 </head>
+
 <body>
     <header>
         <nav>
             
-            <a href="#contact" target="_blank" title="Contact" class="contact-link">
+            <a href="#contact" title="Contact" class="contact-link">
                 <img src="../public/img/courriel-de-contact.png" alt="Contact">
             </a>
             
@@ -34,7 +35,7 @@
         </nav>
     </header>
 
-    <a href="javascript:history.back()" class="back-button" title="Retour">
+    <a href="../index.html" class="back-button" title="Retour">
         <img src="../public/img/fleche-arriere.png" alt="Retour">
     </a>
     <a id="scroll-to-top" href="#">
@@ -65,6 +66,39 @@
     <img src="../public/img/projet/Crack-Hot.png" alt="Crack-Hot Enzo Leprince" class="project-image">
     <img src="../public/img/projet/image_crack_hot.png" alt="Crack-Hot Enzo Leprince" class="project-image">
 
+    
+    <script>
+        document.querySelector('.scroll-down').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#more').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.querySelector('#scroll-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelector('.contact-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('.contact').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    
+
+        window.addEventListener('scroll', function() {
+        const glow = document.querySelector('.glow');
+        if (window.scrollY > 0) {
+            glow.classList.add('hidden');
+        } else {
+            glow.classList.remove('hidden');
+        }
+    });
+    </script>
     <footer id="contact">
         <div class="footer-left">
             <p class="titre-footer">Voulez-vous me contacter?</p>
