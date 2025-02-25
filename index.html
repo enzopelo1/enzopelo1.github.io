@@ -110,13 +110,39 @@
             <a href="projet/projet8.html" class="project-card">
                 <img src="./public/img/projet/soumettre.png" alt="Soumettre Enzo Leprince">
                 <div class="project-info">
-                    <h3>Soumette.fr</h3>
+                    <h3>Soumettre.fr</h3>
                     <p>Web développement</p>
+                    <span class="learn-more">Open</span>
+                </div>
+            </a>
+            <a href="projet/projet9.html" class="project-card">
+                <img src="./public/img/projet/tiktok.png" alt="Tiktok Enzo Leprince">
+                <div class="project-info">
+                    <h3>Tiktok</h3>
+                    <p>Tiktok montage/vidéo</p>
                     <span class="learn-more">Open</span>
                 </div>
             </a>
         </div>
     </section>
+    
+    <section class="carousel">
+        <div class="carousel-wrapper">
+            <div class="carousel-track">
+                <img src="./public/img/logos/html.png" alt="HTML">
+                <img src="./public/img/logos/css.png" alt="CSS">
+                <img src="./public/img/logos/javascript.png" alt="JavaScript">
+                <img src="./public/img/logos/vue-js.png" alt="Vue.js">
+                <img src="./public/img/logos/react.svg" alt="React">
+                <img src="./public/img/logos/angular.png" alt="Angular">
+                <img src="./public/img/logos/node-js.png" alt="Node.js">
+                <img src="./public/img/logos/python.png" alt="Python">
+                <img src="./public/img/logos/php.png" alt="PHP">
+                <img src="./public/img/logos/tailwind.png" alt="Tailwind">
+            </div>
+        </div>
+    </section>
+    
     
  
     <script>
@@ -166,6 +192,11 @@
         checkVisibility(); // Vérifie au chargement
     });
     
+    document.addEventListener("DOMContentLoaded", function () {
+        const track = document.querySelector(".carousel-track");
+        const logos = track.innerHTML; // Copie des logos pour un effet infini
+        track.innerHTML += logos; // Duplique le contenu pour un effet de boucle
+    });
     </script>
 </body>
 

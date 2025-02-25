@@ -276,6 +276,50 @@ section {
     cursor: pointer;
 }
 
+/* Section carrousel */
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    width: max-content; /* Évite que les images s'ajustent à la largeur du parent */
+    animation: scroll 10s linear infinite;
+}
+
+.carousel-track img {
+    height: 100px;
+    width: auto;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.carousel-track img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 
 
 
