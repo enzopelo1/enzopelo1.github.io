@@ -40,12 +40,12 @@
     </a>
 
     <main>
-            <h1 class="title">Portfolio Enzo Leprince</h1>
-            <p>Découvrez mes projets, compétences et expériences professionnelles.</p>
-            <p class="violet">En cours de réalisation</p>
-            <a href="#more" class="scroll-down">
-                <img src="./public/img/fleche-vers-le-bas.png" alt="Scroll Down">
-            </a>
+        <h1 class="title animate-text">Portfolio Enzo Leprince</h1>
+        <p class="animate-text">Découvrez mes projets, compétences et expériences professionnelles.</p>
+        <p class="violet animate-text">En cours de réalisation</p>
+        <a href="#more" class="scroll-down animate-text">
+            <img src="./public/img/fleche-vers-le-bas.png" alt="Scroll Down">
+        </a>
     </main>
     <div class="glow"></div>
     <section id="more">
@@ -99,6 +99,22 @@
                     <span class="learn-more">Open</span>
                 </div>
             </a>
+            <a href="projet/projet7.html" class="project-card">
+                <img src="./public/img/projet/blender.png" alt="Blender Enzo Leprince">
+                <div class="project-info">
+                    <h3>Blender</h3>
+                    <p>Développement 3D</p>
+                    <span class="learn-more">Open</span>
+                </div>
+            </a>
+            <a href="projet/projet8.html" class="project-card">
+                <img src="./public/img/projet/soumettre.png" alt="Soumettre Enzo Leprince">
+                <div class="project-info">
+                    <h3>Soumette.fr</h3>
+                    <p>Web développement</p>
+                    <span class="learn-more">Open</span>
+                </div>
+            </a>
         </div>
     </section>
     
@@ -134,6 +150,22 @@
             glow.classList.remove('hidden');
         }
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const moreSection = document.querySelector("#more");
+    
+        function checkVisibility() {
+            const rect = moreSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                moreSection.style.opacity = "1";
+                moreSection.style.transform = "translateY(0)";
+            }
+        }
+    
+        window.addEventListener("scroll", checkVisibility);
+        checkVisibility(); // Vérifie au chargement
+    });
+    
     </script>
 </body>
 

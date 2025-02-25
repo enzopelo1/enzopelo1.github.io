@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Enzo Leprince</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../public/img/LP.png" sizes="16x16">
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <a href="#contact" target="_blank" title="Contact" class="contact-link">
+                <img src="../public/img/courriel-de-contact.png" alt="Contact">
+            </a>
+            
+            <div class="logo">
+                <a href="../index.html" title="Accueil">
+                    <img src="../public/img/LP.png" alt="Logo">
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/enzo-leprince-6a1721253/" target="_blank" title="LinkedIn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/enzopelo1" target="_blank" title="GitHub">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/enzo.leprince" target="_blank" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <a id="scroll-to-top" href="#">
+        <img src="../public/img/fleche-vers-le-haut.png" alt="Scroll to top" class="fleche">
+    </a>
+
+    <a href="../index.html" class="back-button" title="Retour">
+        <img src="../public/img/fleche-arriere.png" alt="Retour">
+    </a>
+    <a id="scroll-to-top" href="#">
+        <img src="../public/img/fleche-vers-le-haut.png" alt="Scroll to top" class="fleche">
+    </a>
+
+    <div class="project-header">
+        <h1>Blender - 3D <br>Développement</h1>
+    </div>
+    <div class="project-content">
+        <p class="project-description">
+            Ce projet Blender contient une scène détaillée représentant une chambre futuriste. Les choix effectués incluent un lit suspendu, avec une couverture, un oreiller. Ainsi qu'une table de chevet, avec une lampe (avec un petit astronaute), dans la table de chevet, j'ai mis un livre. J'ai aussi ajouté un tapis à coté du lit, et j'ai mis un cadre dans lequel il y a mon prénom et mon nom en 3D. Une parti de la table de nuit est en lumineuse, la lampe de chevet et le cadre aussi. Pour le mettre lumineux et le voir dans le rendu il faut activer le RayTracing. Pour le "mode jour" il faut mettre la "lumiere_jour", et enlever le RayTracing. Pour le mode nuit, il faut activer le RayTracing et enlever la "lumiere_jour" de la scène. J'ai aussi fait une animation sur le cercle de la lampe de chevet, qui tourne autour de l'astronaute.        
+            <div class="project-information">
+            <div>
+                <h3>Client</h3>
+                <p>Professeur IUT</p>
+            </div>
+            <div>
+                <h3>Technologies</h3>
+                <p>Blender</p>
+            </div>
+        </div>
+    </div>
+    
+    <img src="../public/img/projet/Blender.png" alt="Blender Enzo Leprince" class="project-image">
+    <img src="../public/img/projet/image_blender.png" alt="Blender Enzo Leprince" class="project-image">
+
+
+
+<script>
+    document.querySelector('.scroll-down').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#more').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('#scroll-to-top').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    document.querySelector('.contact-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.contact').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+
+
+    window.addEventListener('scroll', function() {
+    const glow = document.querySelector('.glow');
+    if (window.scrollY > 0) {
+        glow.classList.add('hidden');
+    } else {
+        glow.classList.remove('hidden');
+    }
+});
+</script>
+<footer id="contact">
+    <div class="footer-left">
+        <p class="titre-footer">Voulez-vous me contacter?</p>
+        <p>Je m'appelle Enzo Leprince, un développeur passionné par le web et les nouvelles technologies. <br>Je suis à la recherche d'un stage de 14 semaines dans le développement (web).</p>
+    </div>
+    <div class="footer-right">
+        <p>
+            <a href="mailto:hanzoleprince62@gmail.com">hanzoleprince62@gmail.com</a><br>
+            <a href="https://www.linkedin.com/in/enzo-leprince-6a1721253/" target="_blank">LinkedIn</a><br>
+            <a href="https://github.com/enzopelo1" target="_blank">GitHub</a>
+        </p>
+    </div>
+</footer>
+</body>
+
+
+</html>
