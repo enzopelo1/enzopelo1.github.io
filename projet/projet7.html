@@ -11,7 +11,7 @@
     <header>
         <nav>
             
-            <a href="#contact" target="_blank" title="Contact" class="contact-link">
+            <a href="#contact" title="Contact" class="contact-link">
                 <img src="../public/img/courriel-de-contact.png" alt="Contact">
             </a>
             
@@ -33,10 +33,6 @@
             </div>
         </nav>
     </header>
-
-    <a id="scroll-to-top" href="#">
-        <img src="../public/img/fleche-vers-le-haut.png" alt="Scroll to top" class="fleche">
-    </a>
 
     <a href="../index.html" class="back-button" title="Retour">
         <img src="../public/img/fleche-arriere.png" alt="Retour">
@@ -68,44 +64,53 @@
 
 
 
-<script>
-    document.querySelector('.scroll-down').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector('#more').scrollIntoView({ behavior: 'smooth' });
-    });
+    <script>
+        const scrollDownButton = document.querySelector('.scroll-down');
+        if (scrollDownButton) {
+            scrollDownButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('#more').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
 
-    document.querySelector('#scroll-to-top').addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+        const scrollToTopButton = document.querySelector('#scroll-to-top');
+        if (scrollToTopButton) {
+            scrollToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const contactLink = document.querySelector('.contact-link');
+        if (contactLink) {
+            contactLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('.contact').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        window.addEventListener('scroll', function() {
+            const glow = document.querySelector('.glow');
+            if (glow) {
+                if (window.scrollY > 0) {
+                    glow.classList.add('hidden');
+                } else {
+                    glow.classList.remove('hidden');
+                }
+            }
         });
-    });
-
-    document.querySelector('.contact-link').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('.contact').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-
-
-
-    window.addEventListener('scroll', function() {
-    const glow = document.querySelector('.glow');
-    if (window.scrollY > 0) {
-        glow.classList.add('hidden');
-    } else {
-        glow.classList.remove('hidden');
-    }
-});
-</script>
+    </script>
 <footer id="contact">
     <div class="footer-left">
         <p class="titre-footer">Voulez-vous me contacter?</p>
         <p>Je m'appelle Enzo Leprince, un développeur passionné par le web et les nouvelles technologies. <br>Je suis à la recherche d'un stage de 14 semaines dans le développement (web).</p>
     </div>
-    <div class="footer-right">
+    <div class="footer-right contact">
         <p>
             <a href="mailto:hanzoleprince62@gmail.com">hanzoleprince62@gmail.com</a><br>
             <a href="https://www.linkedin.com/in/enzo-leprince-6a1721253/" target="_blank">LinkedIn</a><br>
