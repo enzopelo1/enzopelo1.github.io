@@ -297,7 +297,7 @@ section {
     display: flex;
     gap: 30px;
     width: max-content; /* Évite que les images s'ajustent à la largeur du parent */
-    animation: scroll 10s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 .carousel-track img {
